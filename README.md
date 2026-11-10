@@ -35,7 +35,3 @@ model = init_model()
 model = train_model(model, imdb_dataset, amazon_dataset)
 ```
 
-## Notes
-
-- Since evaluation is Amazon-only, this setup is really testing **cross-domain transfer** (does adding IMDB data help/hurt Amazon sentiment classification?) rather than in-domain performance — worth stating explicitly if you write this up further, since it's not obvious from the code alone.
-- `report_to="none"` disables experiment tracking (e.g., W&B, TensorBoard) — worth enabling for deeper training diagnostics if iterating further.
