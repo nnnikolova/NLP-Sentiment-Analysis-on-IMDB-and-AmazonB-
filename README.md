@@ -23,7 +23,7 @@ This project fine-tunes `roberta-base` (via Hugging Face Transformers) on a **co
   - 3 training epochs
   - Weight decay: 0.01 (regularization)
   - 10% warmup ratio (gradually ramps up learning rate at the start of training)
-- **Evaluates exclusively on the Amazon dataset**, even though training includes both — this is the key design choice, letting the setup measure whether IMDB data helps or hurts performance on the Amazon domain specifically
+- **Evaluates exclusively on the Amazon dataset**, even though training includes both — the goal is that the model generalizes well on Amazon product reviews
 - Tracks accuracy via a custom `compute_metrics` function (argmax over logits vs. labels)
 
 ## Usage
